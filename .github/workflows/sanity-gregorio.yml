@@ -12,7 +12,7 @@ name: 🧪Pipeline SanityTest Execution
 run-name: ${{github.actor}}👨🏻‍🔬 triggered SanityTest in ${{github.ref_name}}
 on:
   push:
-    branches: ['TuBranchAqui'] #! Cambia "TuBranchAqui" por el nombre de tu rama de tarea.
+    branches: ['GX3-4585-⚡️-automation-swag-labs-menu-hacer-varias-acciones-desde-un-burger-menu'] #! Cambia "TuBranchAqui" por el nombre de tu rama de tarea.
 
 jobs:
   TestSuite:
@@ -40,7 +40,7 @@ jobs:
 
     - name: ✅ 🧪Test Suite Execution
       run: | #todo: EDITAR AQUÍ EL ARCHIVO SUITE A EJECUTAR:
-        bun run test:ci tests/elements/uploadDownload_example.test.ts
+        bun run test:ci tests/specs/swagLabs/DT GX3-4585-SwagLabs-Menu.spec.ts
       #? Si usas el script del repo "test:ci" vas a correr tus tests en 4 diferentes navegadores.
     - name: 📊Generate Allure Report
       #? Si usas el script del repo "test" vas a correr tus tests en 1 solo navegador (chromium).
@@ -56,7 +56,7 @@ jobs:
         password: ${{ env.XRAY_SECRET }}
         testFormat: 'junit'
         testPaths: 'test-junit-report/main-importer-report.xml'
-        testExecKey: 'GX3-1533' #!Cambiar a tu TX correspondiente.
+        testExecKey: 'GX3-4589' #!Cambiar a tu TX correspondiente.
         projectKey: 'GX3' #!Cambiar a tu Proyecto Level correspondiente.
       env:
         XRAY_CLIENT: ${{ secrets.XRAY_CLIENT_ID }}

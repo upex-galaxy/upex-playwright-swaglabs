@@ -47,7 +47,7 @@ export default defineConfig({
 		actionTimeout: 0,
 		/* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
 		trace: 'retain-on-failure',
-		screenshot: 'on',
+		screenshot: 'off',
 	},
 
 	/* Configure projects for major browsers */
@@ -56,7 +56,7 @@ export default defineConfig({
 			name: 'chromium',
 			use: { ...devices['Desktop Chrome'], channel: 'chrome' },
 		},
-		{
+		/*{
 			name: 'firefox',
 			use: { ...devices['Desktop Firefox'] },
 		},
@@ -69,7 +69,7 @@ export default defineConfig({
 		{
 			name: 'iphone',
 			use: { ...devices['iPhone 14 Pro'] },
-		},
+		},*/
 		//? Si quieres aplicar una "Global Setup"...
 		//? para que, por ejemplo, puedas usar 1 solo Login para el resto de las pruebas que corran, puedes hacerlo así:
 		// {
