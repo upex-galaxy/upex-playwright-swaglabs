@@ -9,7 +9,7 @@
 		"strictPropertyInitialization": true,
 		"noUnusedLocals": true,
 		"verbatimModuleSyntax": true,
-		"types": ["node"],
+		"types": ["node", "@playwright/test"],
 		"baseUrl": ".",
 		"paths": {
 			"@pages/*": ["./tests/pages/*"],
