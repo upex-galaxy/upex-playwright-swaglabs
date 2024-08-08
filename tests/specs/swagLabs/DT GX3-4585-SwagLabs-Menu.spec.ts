@@ -2,15 +2,14 @@ import type { Page } from '@playwright/test';
 import { test, expect } from '@playwright/test';
 import { LoginPage } from '@pages/SwagLabsLoginPage';
 import { Productlist } from '@pages/SwagLabsProductsPage';
-import { precondition, story } from '@pages/TestBase';
 
-story('SwagLabs - Página de Listado de Productos (PLP)', () => {
+test.describe('SwagLabs - Página de Listado de Productos (PLP)', () => {
 
 	let page: Page;
 	let loginPage: LoginPage;
 	let productsPage: Productlist;
 
-	precondition(async ({ browser }) => {
+	test.beforeEach(async ({ browser }) => {
 		page = await browser.newPage();
 		loginPage = new LoginPage(page);
 		productsPage = new Productlist(page);
