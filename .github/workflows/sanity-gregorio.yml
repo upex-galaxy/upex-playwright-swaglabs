@@ -40,7 +40,7 @@ jobs:
 
     - name: ✅ 🧪Test Suite Execution
       run: | #todo: EDITAR AQUÍ EL ARCHIVO SUITE A EJECUTAR:
-        bun run test: tests/specs/SwagLabs/SwagLabsCheckout.test.spec.ts
+        bun run test:ci tests/specs/SwagLabs/SwagLabsCheckout.test.spec.ts
       #? Si usas el script del repo "test:ci" vas a correr tus tests en 4 diferentes navegadores.
     - name: 📊Generate Allure Report
       #? Si usas el script del repo "test" vas a correr tus tests en 1 solo navegador (chromium).
