@@ -1,8 +1,8 @@
-import { test, expect } from '@pages/TestBase';
+import { test, expect, story, precondition } from '@pages/TestBase';
 import credentials from '../../data/credencialesSwagLabs.json' assert {type: 'json' };
 
-test.describe('[Automation] SwagLabs | Checkout | Finalizar o Cancelar la compra de un producto en la Website', () => {
-	test.beforeEach(async ({ swagLoginPage }) => {
+story('[Automation] SwagLabs | Checkout | Finalizar o Cancelar la compra de un producto en la Website', () => {
+	precondition(async ({ swagLoginPage }) => {
 		
 		await swagLoginPage.goto();
 	});
